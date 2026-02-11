@@ -45,33 +45,43 @@ All plots are generated using Python (NumPy, SciPy, Matplotlib, Seaborn).
 ## 🧠 **Key Concepts**
 
 ### **1. Gaussian Tails**
-Gaussian tails decay as  
-\[
-P(|X| > x) \sim e^{-x^2/2}
-\]  
-This makes extreme events *exponentially unlikely*.
+
+Gaussian tails decay approximately as:
+
+```
+P(|X| > x) ≈ exp( - x^2 / 2 )
+```
+
+Extreme events become *exponentially unlikely* as x grows.
 
 ---
 
 ### **2. Laplace Tails**
-Laplace tails decay as  
-\[
-P(|X| > x) \sim e^{-|x|}
-\]  
+
+Laplace tails decay as:
+
+```
+P(|X| > x) ≈ exp( - |x| )
+```
+
 Heavier than Gaussian → more frequent large deviations.
 
 ---
 
 ### **3. Student‑t Tails**
-Student‑t tails decay as  
-\[
-P(|X| > x) \sim x^{-(\nu+1)}
-\]  
-Power‑law decay → **extreme events are dramatically more likely**, especially for small ν.
+
+Student‑t tails decay as:
+
+```
+P(|X| > x) ≈ x^-(ν + 1)
+```
+
+This is a **power‑law**, meaning extreme events are dramatically more likely, especially for small ν.
 
 ---
 
 ### **4. Why Fat Tails Matter**
+
 Gaussian models fail when:
 
 - Markets crash  
@@ -87,12 +97,12 @@ Fat‑tailed models capture these realities more accurately.
 ## 🧪 **How to Run the Code**
 
 ### Install dependencies
-```
+```bash
 pip install -r requirements.txt
 ```
 
 ### Launch the notebook
-```
+```bash
 jupyter notebook notebooks/gaussian_vs_fat_tailed.ipynb
 ```
 
@@ -149,3 +159,4 @@ plt.show()
 
 ## 📜 **License**
 MIT License
+```
